@@ -1,3 +1,16 @@
+---
+title: createNamespacedHelpers
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - 部署
+  - 示例
+  - Hexo
+excerpt: 二春子的createNamespacedHelpers
+---
+
 # createNamespacedHelpers
 完整代码分支 [stage-4](https://github.com/shengrongchun/parse-vue-vuex)
 

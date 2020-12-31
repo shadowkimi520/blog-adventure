@@ -1,3 +1,15 @@
+---
+title: ModuleCollection
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - vue全家桶
+  - vuex
+excerpt: 二春子的ModuleCollection
+---
+
 # ModuleCollection
 `ModuleCollection` 从创建根模块对象 `this.root` 开始，通过子模块对象放入父模块的 `_children` 中。递归遍历最终收集所有的模块
 

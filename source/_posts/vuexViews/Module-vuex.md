@@ -1,3 +1,15 @@
+---
+title: Module
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - vue全家桶
+  - vuex
+excerpt: 二春子的Module
+---
+
 # Module
 创建模块的 `class`，创建的模块属性：
 + runtime: 是否是运行时创建的模块标识

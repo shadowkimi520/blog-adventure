@@ -1,3 +1,16 @@
+---
+title: module 与模块收集
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - vue全家桶
+  - vuex
+excerpt: 二春子的module 与模块收集
+---
+
+
 # module 与模块收集
 [官网介绍](https://vuex.vuejs.org/zh/guide/modules.html)
 

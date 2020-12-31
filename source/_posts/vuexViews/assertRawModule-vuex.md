@@ -1,3 +1,16 @@
+---
+title: assertRawModule
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - 部署
+  - 示例
+  - Hexo
+excerpt: 二春子的assertRawModule
+---
+
 # assertRawModule
 ```js{17}
 //从Assert可以得出：mutations和getters里面定义的只能是函数，而actions可以是函数或者含有handler函数的对象

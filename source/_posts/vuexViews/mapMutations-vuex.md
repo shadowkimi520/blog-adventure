@@ -1,3 +1,15 @@
+---
+title: mapMutations
+author: 张凯强
+date: 2020-12-31 00:00:00
+index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
+category: vuex
+tags:
+  - vue全家桶
+  - vuex
+excerpt: 二春子的mapMutations
+---
+
 # mapMutations
 完整代码分支 [stage-4](https://github.com/shengrongchun/parse-vue-vuex)
 
