@@ -5,9 +5,8 @@ date: 2020-12-31 00:00:00
 index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
 category: vuex
 tags:
-  - 部署
-  - 示例
-  - Hexo
+  - vue全家桶
+  - vuex
 excerpt: 二春子的assertRawModule
 ---
 
