@@ -1,6 +1,6 @@
 ---
 title: 什么是 vuex?
-author: 张凯强
+author: 盛二春
 date: 2020-12-31 00:00:00
 index_img: https://rmt.dogedoge.com/fetch/fluid/storage/actions-deploy/cover.png?w=480&fmt=webp
 category: vuex
