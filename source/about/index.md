@@ -1,7 +1,8 @@
 ---
-title: about
+title: 关于
 date: 2020-12-31 15:21:51
+layout: about
 ---
 
 
-这里是龙虾狂魔&&二春子的博客！
+关于页面内容，支持 Markdown, HTML
