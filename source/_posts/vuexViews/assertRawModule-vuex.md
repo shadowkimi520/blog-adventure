@@ -11,7 +11,7 @@ excerpt: 二春子的assertRawModule
 ---
 
 # assertRawModule
-```js{17}
+```js
 //从Assert可以得出：mutations和getters里面定义的只能是函数，而actions可以是函数或者含有handler函数的对象
 //assertRawModule作用就是判断模块中定义的类型是否正确，在dev环境下会警告
 const functionAssert = {
