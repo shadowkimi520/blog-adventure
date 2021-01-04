@@ -858,19 +858,19 @@ links:
       title: "二春 Blog",
       intro: "盛佳人",
       link: "https://github.com/shengrongchun",
-      image: "http://resource.segen.feedadx.com/topic/24jq.jpg"
+      image: "https://resource.segen.feedadx.com/topic/24jq.jpg"
     }
     - {
       title: "Fluid Docs",
       intro: "主题使用指南",
       link: "https://hexo.fluid-dev.com/docs/",
-      image: "http://resource.segen.feedadx.com/topic/24jq.jpg"
+      image: "https://resource.segen.feedadx.com/topic/24jq.jpg"
     }
     - {
       title: "Fluid Repo",
       intro: "主题 GitHub 仓库",
       link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      image: "http://resource.segen.feedadx.com/topic/24jq.jpg"
+      image: "https://resource.segen.feedadx.com/topic/24jq.jpg"
     }
 
 
