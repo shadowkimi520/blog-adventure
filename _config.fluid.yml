@@ -618,11 +618,11 @@ post:
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo
-    type: disqus
+    type: changyan
 
 
 #---------------------------
@@ -714,8 +714,8 @@ waline:
 # Based on third-party service, insufficient support for regions outside China
 # http://changyan.kuaizhan.com
 changyan:
-  appid: ''
-  appkey: ''
+  appid: 'cyveVCApr'
+  appkey: '9e8cf09a6aad75f4ef17bca1e2641688'
 
 # 来必力 Livere
 # 基于第三方的服务
