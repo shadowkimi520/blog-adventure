@@ -12,7 +12,7 @@ banner_img: /images/Charles.webp
 
 ### Charles配置
 
-- Help -> SSL Proxying -> Install Charles Root Certiface，将Charles自带证书安装到`受信任的根证书办法机构`
+- Help -> SSL Proxying -> Install Charles Root Certiface，将Charles自带证书安装到`受信任的根证书颁发机构`
 - Proxy -> SSL Proxying Settings下勾选`Enable SSL Proxying`，并添加需要代理的location：`*:*` `*:443`
 
 ### 移动端配置
