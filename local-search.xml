@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>WebGL开发</title>
+    <link href="/blog-adventure/2021/03/10/WebGL%E5%BC%80%E5%8F%91/"/>
+    <url>/blog-adventure/2021/03/10/WebGL%E5%BC%80%E5%8F%91/</url>
+    
+    <content type="html"><![CDATA[<h2 id="WebGL开发"><a href="#WebGL开发" class="headerlink" title="WebGL开发"></a>WebGL开发</h2><h3 id="什么是WebGL"><a href="#什么是WebGL" class="headerlink" title="什么是WebGL"></a>什么是WebGL</h3>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用Charles抓包小程序网络请求</title>
+    <link href="/blog-adventure/2021/01/13/%E4%BD%BF%E7%94%A8Charles%E6%8A%93%E5%8C%85%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
+    <url>/blog-adventure/2021/01/13/%E4%BD%BF%E7%94%A8Charles%E6%8A%93%E5%8C%85%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/</url>
+    
+    <content type="html"><![CDATA[<h2 id="抓包https请求"><a href="#抓包https请求" class="headerlink" title="抓包https请求"></a>抓包https请求</h2><h3 id="Charles配置"><a href="#Charles配置" class="headerlink" title="Charles配置"></a>Charles配置</h3><ul><li>Help -&gt; SSL Proxying -&gt; Install Charles Root Certiface，将Charles自带证书安装到<code>受信任的根证书颁发机构</code></li><li>Proxy -&gt; SSL Proxying Settings下勾选<code>Enable SSL Proxying</code>，并添加需要代理的location：<code>*:*</code> <code>*:443</code></li></ul><h3 id="移动端配置"><a href="#移动端配置" class="headerlink" title="移动端配置"></a>移动端配置</h3><p>移动端需要和Charles在同一个局域网中，安装SSL证书；注意部分安卓机型无法安装pem证书，需要修改后缀为crt <a href="https://www.jianshu.com/p/1d0360e50a01">参考使用Charles抓包安卓模拟器（MuMu）</a></p><h3 id="使用夜神Android模拟器"><a href="#使用夜神Android模拟器" class="headerlink" title="使用夜神Android模拟器"></a>使用夜神Android模拟器</h3><blockquote><p>现在微信都更新到了7..0以上的版本，使用charles抓包工具已经无法再抓到接口的数据。<br>原因如下：安卓系统 7.0 以下版本，不管微信任意版本，都会信任系统提供的SSL证书</p></blockquote><ul><li>安卓系统 7.0 以上版本，微信 7.0 以下版本，微信会信任系统提供的证书</li><li>安卓系统 7.0 以上版本，微信 7.0 以上版本，微信只信任它自己配置的证书列表</li></ul><p>需要root的手机来将Charles的SSL证书导为系统证书，<a href="https://www.52pojie.cn/thread-1145984-1-1.html">参考charles实现微信小程序抓包</a></p><p>root手机比较麻烦，可以使用夜神模拟器 <a href="https://www.52pojie.cn/thread-1145984-1-1.html">charles实现微信小程序抓包</a></p><h3 id="Charles使用注意事项"><a href="#Charles使用注意事项" class="headerlink" title="Charles使用注意事项"></a>Charles使用注意事项</h3><p>Charles是一款很好用的抓包修改工具，但是如果你不是很熟悉这个工具的话，肯定会遇到各种感觉很莫名其妙 的状况，这里就来帮你一一解答。</p><ul><li>为什么下载了不能用啊？打不开啊。因为charles是需要java环境才能运行的，需要先安装java环境才可以。  </li><li>为什么我用着用着就自动关闭了？大概30分钟就会关闭一次。因为charles如果没有注册的话，每次打开后就只能哟个30分钟，然后就会自动关闭，所以最好在使用前先按照 说明去进行工具的注册操作。  </li><li>为什么我在操作的时候有时候就直接工具就界面卡住死了，关都关不掉，只能用任务管理器才可以关掉？这个的确是charles这个工具的一个bug，开始用的时候，我也很恶心，而且经常悲剧，但是现在也有相应的解决 办法了，下面那样操作就可以了。首先随便抓些包，要求有图片的请求。然后选中一个图片的请求，然后分别点击 Response - Raw 然后那里会加载其中的内容，然后加载完毕后，再去 随便操作就可以了，就不会在悲剧的直接工具卡死掉了。。。  </li><li>为什么用了charles后，我就上不了网页了，但是qq可以。因为如果charles是非正常状态下关闭的话，那么IE的代理就不会被自动取消，所以会导致这种情况。解决办法：第一种：直接打开charles，然后再正常关闭即可。 第二种：去将IE浏览器代理位置的勾选去掉。  </li><li>为什么我用charles不能抓到socket和https的数据呢？首先，charles是不支持抓去socket数据的。 然后，如果抓不到https的数据的话，请查看你是不是没有勾选ssl 功能。 Proxy - Proxy Settings - SSL 设置  </li><li>为什么我用charles抓取手机APP，什么都是配置正确的，但是却抓不到数据。首先，请确保电脑的防火墙是关闭状态，这个很重要。如果，防火墙关了还是不行，那么请把手机wifi断掉后重新连接，这样一般就可以解决问题了。 如果以上方法 还是不行的话，那么请将手机wifi位置的ip地址设置成静态ip，然后重启charles工具。  </li><li>抓包后发现form中有些数据显示是乱码怎么办？请在Raw模式下查看，Raw模式显示的是原始数据包，一般不会因为编码问题导致显示为乱码。  </li><li>我用charles抓手机app的数据，但是同时也会抓去到电脑端的数据，可以设置吗？可以，设置位置在Proxy - Windows Proxy ，勾选表示接收电脑的数据抓包，如果只想抓去APP的数据请求，可 以不勾选此功能。  </li><li>为什么我用IE可以抓到数据，但是用360或者谷歌浏览器就不行？请确保360或者谷歌的代码设置中是不是勾选设置的是 使用IE代理。  </li><li>想要复制粘贴某些数据的话，怎么办，右键没有相应功能啊？请直接使用Ctrl +C 和 Ctrl+V 即可。  </li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Charles</tag>
+      
+      <tag>小程序抓包</tag>
+      
+      <tag>https</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>微信小程序反编译指北</title>
+    <link href="/blog-adventure/2021/01/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8C%87%E5%8C%97/"/>
+    <url>/blog-adventure/2021/01/06/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%8F%8D%E7%BC%96%E8%AF%91%E6%8C%87%E5%8C%97/</url>
+    
+    <content type="html"><![CDATA[<p>小程序反编译过程中遇到的问题整理。</p><h2 id="小程序反编译"><a href="#小程序反编译" class="headerlink" title="小程序反编译"></a>小程序反编译</h2><h3 id="如何获取小程序源码包"><a href="#如何获取小程序源码包" class="headerlink" title="如何获取小程序源码包"></a>如何获取小程序源码包</h3><p>下载夜神安卓模拟器，模拟访问微信小程序；随后在模拟器文件系统的 <code>/data/data/com.tencent.mm/MicroMsg/&#123;一串16进制字符&#125;/appbrand/pkg/</code> 目录下便可以找到 <code>xxxxx.wxapkg</code> 这样的文件，这个便是微信小程序的源码包了</p><p>.wxapkg是一个二进制文件，具体结构可以参考大神的这篇博客：<a href="https://lrdcq.com/me/read.php/66.htm">微信小程序源码阅读笔记</a></p><blockquote><p>如果无法搜索特定的微信小程序，可以通过好友转发的方式解决<br>安卓模拟器源码包所在位置无法转发出来的问题，可以通过先压缩，然后拷贝到 <code>/data</code> 根目录下再转发来规避；或者进入模拟器内部设置超级用户权限（设置-系统-超级用户，自动响应勾选“允许” <a href="https://blog.csdn.net/qq_41139830/article/details/80531802">参考</a>），压缩后通过QQ或者微信发送到“我的电脑”（如果不进行压缩的话，QQ会提示文件不可用）</p></blockquote><blockquote><p>MAC下共享小程序源码包：夜神模拟器中将源码包拷贝到 /mnt/shared/Other 目录下，MAC目录为：c:/users/longxiakuangmo/资源库/Application Support/NoxAppPlayer/Nox_share/Other目录下</p></blockquote><h3 id="如何反编译"><a href="#如何反编译" class="headerlink" title="如何反编译"></a>如何反编译</h3><p><img src="/blog-adventure/images/mp-recompile.jpg" alt="操作步骤"></p><p>参考<a href="https://www.cnblogs.com/gamedaybyday/p/10265561.html">小游戏学习–获取已发布微信小游戏源码</a></p><p>参考<a href="https://github.com/shadowkimi520/wxappUnpacker-1">github项目</a></p><ul><li>有些小程序依赖第三方模块，生成的文件名可能在windows下非法，此时可以换个linux环境解码  </li><li>新版小程序开发工具加了混淆功能，在提交代码的时候可以勾选这项功能来增加反编译后阅读成本，但依旧是可以反编译拿到源码的  </li><li>拿到源码后拷贝一份有登录权限的 project.config.json 到包中, 用微信开发者工具打开即可看到源码，剩下的就是如何破解登录了  </li></ul>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>微信小程序</tag>
+      
+      <tag>小程序反编译</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/blog-adventure/2021/01/06/hello-world/"/>
+    <url>/blog-adventure/2021/01/06/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h3 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h3>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>什么是 vuex?</title>
+    <link href="/blog-adventure/2020/12/31/vuexViews/README/"/>
+    <url>/blog-adventure/2020/12/31/vuexViews/README/</url>
+    
+    <content type="html"><![CDATA[<h1 id="什么是-vuex"><a href="#什么是-vuex" class="headerlink" title="什么是 vuex?"></a>什么是 vuex?</h1><p>Vuex 是一个专为 Vue.js 应用程序开发的<code>状态管理模式</code>。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种<code>可预测的</code>方式发生变化。</p><p>::: tip 说明<br>此系列文章，由浅入深，实现对 <code>源码</code> 的完全解析<br>:::</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vuex</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue全家桶</tag>
+      
+      <tag>vuex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>assertRawModule</title>
+    <link href="/blog-adventure/2020/12/31/vuexViews/assertRawModule-vuex/"/>
+    <url>/blog-adventure/2020/12/31/vuexViews/assertRawModule-vuex/</url>
+    
+    <content type="html"><![CDATA[<h1 id="assertRawModule"><a href="#assertRawModule" class="headerlink" title="assertRawModule"></a>assertRawModule</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">//从Assert可以得出：mutations和getters里面定义的只能是函数，而actions可以是函数或者含有handler函数的对象</span><br><span class="hljs-comment">//assertRawModule作用就是判断模块中定义的类型是否正确，在dev环境下会警告</span><br><span class="hljs-keyword">const</span> functionAssert = &#123;<br>  <span class="hljs-attr">assert</span>: <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;function&#x27;</span>,<br>  <span class="hljs-attr">expected</span>: <span class="hljs-string">&#x27;function&#x27;</span><br>&#125;<br><span class="hljs-keyword">const</span> objectAssert = &#123;<br>  <span class="hljs-attr">assert</span>: <span class="hljs-function"><span class="hljs-params">value</span> =&gt;</span> <span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;function&#x27;</span> ||<br>    (<span class="hljs-keyword">typeof</span> value === <span class="hljs-string">&#x27;object&#x27;</span> &amp;&amp; <span class="hljs-keyword">typeof</span> value.handler === <span class="hljs-string">&#x27;function&#x27;</span>),<br>  <span class="hljs-attr">expected</span>: <span class="hljs-string">&#x27;function or object with &quot;handler&quot; function&#x27;</span><br>&#125;<br><span class="hljs-keyword">const</span> assertTypes = &#123;<br>  <span class="hljs-attr">getters</span>: functionAssert, <span class="hljs-comment">//期望getters 是函数</span><br>  <span class="hljs-attr">mutations</span>: functionAssert,<span class="hljs-comment">// 期望 mutations 是函数</span><br>  <span class="hljs-attr">actions</span>: objectAssert <span class="hljs-comment">// 期望actions是函数或者是对象并且对象的 handler 是函数</span><br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">assertRawModule</span>(<span class="hljs-params">path, rawModule</span>) </span>&#123;<br>  <span class="hljs-built_in">Object</span>.keys(assertTypes).forEach(<span class="hljs-function"><span class="hljs-params">key</span> =&gt;</span> &#123;<span class="hljs-comment">//key: getters mutations actions</span><br>    <span class="hljs-keyword">if</span> (!rawModule[key]) <span class="hljs-keyword">return</span> <span class="hljs-comment">// 检测模块没有定义 getters mutations actions 直接return</span><br><br>    <span class="hljs-keyword">const</span> assertOptions = assertTypes[key] <span class="hljs-comment">//获取相关类型的 Assert: &#123;assert,expected&#125;</span><br>    <span class="hljs-comment">// mutations: &#123;//rawModule[key]</span><br>    <span class="hljs-comment">//   name：(state)=&gt;&#123;</span><br>    <span class="hljs-comment">//     ……</span><br>    <span class="hljs-comment">//   &#125;</span><br>    <span class="hljs-comment">// &#125;</span><br>    <span class="hljs-comment">//forEachValue 与 assert 可以在 工具-方法 中查看</span><br>    forEachValue(rawModule[key], <span class="hljs-function">(<span class="hljs-params">value, type</span>) =&gt;</span> &#123;<span class="hljs-comment">//value是如：(state)=&gt; &#123;&#125;，type如：name</span><br>      assert(<br>        assertOptions.assert(value),<br>        makeAssertionMessage(path, key, type, value, assertOptions.expected)<br>      )<br>    &#125;)<br>  &#125;)<br>&#125;<br><span class="hljs-comment">//path:[]装模块名称的数组 key:getters/mutations/actions type:相关(getter/actions/mutations)里面定义的函数名称</span><br><span class="hljs-comment">//value: 里面定义的函数体</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makeAssertionMessage</span>(<span class="hljs-params">path, key, type, value, expected</span>) </span>&#123;<br>  <span class="hljs-keyword">let</span> buf = <span class="hljs-string">`<span class="hljs-subst">$&#123;key&#125;</span> should be <span class="hljs-subst">$&#123;expected&#125;</span> but &quot;<span class="hljs-subst">$&#123;key&#125;</span>.<span class="hljs-subst">$&#123;type&#125;</span>&quot;`</span><br>  <span class="hljs-keyword">if</span> (path.length &gt; <span class="hljs-number">0</span>) &#123;<br>    buf += <span class="hljs-string">` in module &quot;<span class="hljs-subst">$&#123;path.join(<span class="hljs-string">&#x27;.&#x27;</span>)&#125;</span>&quot;`</span><br>  &#125;<br>  buf += <span class="hljs-string">` is <span class="hljs-subst">$&#123;<span class="hljs-built_in">JSON</span>.stringify(value)&#125;</span>.`</span><br>  <span class="hljs-keyword">return</span> buf<br>&#125;<br></code></pre></td></tr></table></figure><p>上述代码加上注释非常容易看懂，此方法的作用主要是约束用户定义的 <code>getters/mutations/actions</code> 类型是否正确，从 <code>Assert</code> 可以得出：<code>mutations</code> 和 <code>getters</code> 里面定义的只能是函数，而 <code>actions</code> 可以是函数或者含有 <code>handler</code> 函数的对象。举例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js">&#123;<br>  <span class="hljs-attr">actions</span>: &#123;<br>    <span class="hljs-attr">name</span>: <span class="hljs-number">123</span>,<span class="hljs-comment">//类型错误</span><br>    <span class="hljs-attr">sex</span>: &#123;&#125;,<span class="hljs-comment">//类型错误</span><br>    <span class="hljs-function"><span class="hljs-title">age</span>(<span class="hljs-params"></span>)</span> &#123;&#125;,<span class="hljs-comment">//类型正确</span><br>    <span class="hljs-attr">address</span>: &#123;<span class="hljs-comment">//类型正确</span><br>      <span class="hljs-function"><span class="hljs-title">handler</span>(<span class="hljs-params"></span>)</span> &#123;&#125;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>::: tip 提示<br><code>forEachValue</code> 与 <code>assert</code> 可以在 <code>工具-方法</code> 中查看<br>:::</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>vuex</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>vue全家桶</tag>
+      
+      <tag>vuex</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
